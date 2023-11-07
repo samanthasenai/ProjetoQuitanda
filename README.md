@@ -81,7 +81,7 @@ Contribuições são bem-vindas. Sinta-se à vontade para fazer um fork do repos
 
 - [João Paulo]: Instrutor de Programação Web Back-End.
 
-- [Samantha ]: Autor do projeto
+- [Samantha Fernandes]: Autor do projeto
 
 - samantha.almeida2@aluno.senai.br
  
