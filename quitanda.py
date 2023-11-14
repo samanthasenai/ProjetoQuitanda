@@ -58,6 +58,12 @@ def login():
     title="Login"
     return render_template("login.html", title=title)
 
+@app.route("/quemsomos")
+def quemsomos():
+    title = "Quem Somos"
+    return render_template("quemsomos.html", title=title)
+
+
 #ROTA DA PÁGINA DE ADM
 @app.route("/adm")
 def adm():
@@ -112,7 +118,7 @@ def excluir(id):
     if verifica_sessao():
         id = int(id)
         conexao = conecta_database()
-        conexao.execute('DELETE FROM produtos WHERE id_prod = ?', (id))
+        conexao.execute('DELETE FROM produtos WHERE id_prod = ?', (id,))
         conexao.commit()
         conexao.close()
         return redirect('/adm')
@@ -125,7 +131,7 @@ def editar(id_prod):
     if verifica_sessao():
         iniciar_db()
         conexao = conecta_database()
-        produtos = conexao.execute('SELECT * FROM produtos WHERE id_prod = ?', (id_prod,)).fetchall
+        produtos = conexao.execute('SELECT * FROM produtos WHERE id_prod = ?', (id_prod,)).fetchall()
         conexao.close()
         title = "Edição de produtos"
         return render_template("editprodutos.html", produtos=produtos, title=title)
@@ -153,11 +159,9 @@ def editprod():
 def busca():
     busca=request.form['buscar']
     conexao = conecta_database()
-    produtos = conexao.execute('SELECT * FROM produtos WHERE nome_prod LIKE "%" || ? || "%"', (busca,)).fetchall()
+    produtos = conexao.execute('SELECT * FROM produtos WHERE nome_prod LIKE "%" || ? || "%" ', (busca,)).fetchall()
     title = "Home"
     return render_template("home.html", produtos=produtos, title=title)
-
-    
 
 #FINAL DO CODIGO - EXECUTANDO O SERVIDOR 
 app.run(debug=True)

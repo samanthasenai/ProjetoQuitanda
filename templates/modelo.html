@@ -27,18 +27,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active fs-6 fw-bold text-white" aria-current="page" href="modelo.html">Home</a>
+                            <a class="nav-link active fs-6 fw-bold text-white" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active fs-6 fw-bold text-white" aria-current="page"
-                                href="quemsomos.html">Quem somos</a>
+                                href="/quemsomos">Quem somos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active fs-6 fw-bold text-white" aria-current="page" href="#">Contato</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <form action="/busca" method="post" class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" name="buscar" id="buscar" aria-label="Search">
                         <button class="btn bg-danger text-white" type="submit">Buscar</button>
                     </form>
                 </div>

@@ -4,4 +4,4 @@ CREATE TABLE IF NOT EXISTS produtos (
     desc_prod TEXT NOT NULL,
     preco_prod REAL NOT NULL,
     img_prod TEXT NOT NULL
-)
+);

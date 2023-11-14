@@ -1,6 +1,5 @@
 {% extends 'modelo.html' %}
 {% block conteudo %}
-<h1 class="display-1 text-danger text-center">Página em construção</h1>
 {% if not produtos %}
 <h1 class="display-5 text-center text-danger">Estamos preparando as promoções desta semana...</h1>
 <h2 class="display-4 text-center text-success">Retorne em breve.</h2>
@@ -8,7 +7,7 @@
 {% else %}
 <div class="container">
     <div class="row g-3">
-        {% for produtoin produtos %}
+        {% for produto in produtos %}
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card text-center bg-light">
                 <img src="../static/img/produtos/{{ produto['img_prod'] }}" class="card-img-top" />

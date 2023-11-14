@@ -1,0 +1,110 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+
+
+<div id="carouselExampleCaptions" class="carousel slide mt-3">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../static/img/qmsomos/imagem1.jpeg" class="d-block w-50  mx-auto img-fluid img_carousel" style="width: 70%; max-width: 500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4>Como tudo começou...</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/img/qmsomos/imagem2.jpeg" class="d-block w-50  mx-auto img_carousel"  style="width: 70%; max-width: 500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4>Progredimos</h4>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../static/img/qmsomos/imagem3.jpeg" class="d-block w-50   mx-auto img_carousel" style="width: 70%; max-width: 500px;" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4>Com suor e determinação,
+          <br>senhor Zé alcançou o cume do sucesso.
+        </h4>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="px-1 mt-7">
+  <div class="ladodireito m-5">
+    <h3 style="text-align: center;  color: #198754;  font-weight: 650;">Nossa História</h3>
+    <p style="font-weight: 500;">A Quitanda do Zé tem suas raízes na simplicidade e no empreendedorismo de José Carlos Pereiras, um homem do
+      interior paulista que decidiu compartilhar os sabores da terra com sua comunidade. A história da Quitanda do Zé é
+      um exemplo de perseverança e crescimento gradual.
+      Tudo começou quando Zé, como é carinhosamente chamado, saiu pelas ruas com seu carrinho de mão carregado de frutas
+      e verduras frescas. De porta em porta, ele oferecia seus produtos, conquistando a confiança de seus primeiros
+      clientes.
+      Com o tempo, a demanda por suas mercadorias cresceu, e Zé tomou uma decisão audaciosa. Ele montou uma modesta
+      barraca na feira municipal, onde a Quitanda do Zé logo se tornou uma parada obrigatória para os moradores em busca
+      de alimentos frescos e saborosos. A qualidade dos produtos e o atendimento caloroso fizeram com que a Quitanda do
+      Zé se destacasse.
+      À medida que o tempo passava, Zé e sua equipe mantiveram-se fiéis a seus valores de oferecer produtos de alta
+      qualidade e um atendimento acolhedor. Isso atraiu cada vez mais clientes leais.</p>
+
+
+    <h4 style="color: #198754;  font-weight: 650;">Missão</h4>
+    <p style="font-weight: 500;">A missão da Quitanda do Zé é simples e clara: fornecer alimentos frescos, saudáveis e saborosos a preços
+      acessíveis. Eles se comprometem a atender as necessidades de seus clientes com produtos de qualidade superior e a
+      criar um ambiente acolhedor que celebre a comunidade local.</p>
+
+    <h4 style="color: #198754;  font-weight: 650;">Visão</h4>
+    <p style="font-weight: 500;">A visão de Zé é continuar a crescer e a servir a comunidade. Ele sonha em expandir a Quitanda do Zé para outras
+      regiões, compartilhando os sabores únicos de seu local de origem. Ele acredita que a paixão pela qualidade e o
+      compromisso com o cliente são os pilares para um futuro brilhante.</p>
+
+    <h4 style="color: #198754;  font-weight: 650;">Valores</h4>
+    <h5 style="color: #198754;  font-weight: 650;" >A Quitanda do Zé se baseia em valores sólidos:</h6>
+      <p style="font-weight: 500;">
+        Qualidade: Eles se esforçam para fornecer produtos da mais alta qualidade, cultivados localmente sempre que
+        possível.<br>
+        Honestidade: A transparência e a integridade estão no centro de tudo o que fazem.<br>
+        Comunidade: Eles são parte da comunidade e se dedicam a apoiá-la.<br>
+        Atendimento ao Cliente: Cada cliente é um amigo, e eles tratam todos com carinho e respeito.<br>
+        Sustentabilidade: Comprometem-se a adotar práticas sustentáveis em suas operações.<br>
+      </p>
+      </h3>
+  </div>
+</div>
+</div>
+<!-- bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
+
+{% endblock %}
